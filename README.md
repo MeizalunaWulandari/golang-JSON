@@ -14,3 +14,7 @@ Jika mengikuti kontrak `JSON` bentuknya adalah `Object` dan `Array`, sedangkan p
 ### Struct
 JSON Object di golang direpresentasikan dengan type data `struct` <br>
 Dimana tiap atribut di `JSON Object` merupakan atribut di `struct`
+
+## JSON Decode
+Untuk melakukan konversi dari JSON ke tipe data di golang `(decode)`, kita bisa menggunakan function `json.Unmarshal(byte[], interface{})`<br>
+Diaman, `byte[]` adalah data `JSON`nya, sedangkan `interface{}` adalah tempat menyimpan hasil konversi, biasanya berupa `pointer`
