@@ -50,3 +50,24 @@ func TestJSONArrayDecode(t *testing.T) {
 	fmt.Println(customer.Married)
 	fmt.Println(customer.Hobbies)
 }
+
+func TestJSONArrayComplex(t *testing.T) {
+	customer := Customer{
+		FirstName: "Meizaluna",
+		Address: []Address{
+			{
+				Street:     "Jl. Pramuka 17",
+				Country:    "Indonesia",
+				PortalCode: "76148",
+			},
+			{
+				Street:     "Jl. Sultan Adam",
+				Country:    "Indonesia",
+				PortalCode: "88102",
+			},
+		},
+	}
+
+	bytes, _ := json.Marshal(customer)
+	fmt.Println(string(bytes))
+}
