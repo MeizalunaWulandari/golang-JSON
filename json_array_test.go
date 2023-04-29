@@ -6,20 +6,16 @@ import (
 	"testing"
 )
 
-type Customer struct {
-	FirstName string
-	LastName  string
-	Age       int
-	Married   bool
-	Hobbies   []string
-}
-
-func TestJSONObject(t *testing.T) {
+func TestJSONArray(t *testing.T) {
 	customer := Customer{
 		FirstName: "Meizaluna",
 		LastName:  "Wulandari",
-		Age:       16,
-		Married:   false,
+		Hobbies: []string{
+			"Gaming",
+			"Reading",
+			"Coding",
+			"Sleeping",
+		},
 	}
 
 	bytes, _ := json.Marshal(customer)
