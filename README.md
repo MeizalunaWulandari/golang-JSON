@@ -11,3 +11,6 @@ Karena parameternya `interface{}`, maka kita bisa memasukkan tipe data apapun ke
 Pada materi sebelumnya kita melakukan encode data seperti `string, number, boolean, dan type data primitif lainnya`<br>
 Walaupun bisa dilakukan karena sesuai dengan kontrak `interface{}`, namun tidak sesuai dengan kontrak `JSON`<br>
 Jika mengikuti kontrak `JSON` bentuknya adalah `Object` dan `Array`, sedangkan pada materi sebelumnya harya berupa `value` saja
+### Struct
+JSON Object di golang direpresentasikan dengan type data `struct` <br>
+Dimana tiap atribut di `JSON Object` merupakan atribut di `struct`
