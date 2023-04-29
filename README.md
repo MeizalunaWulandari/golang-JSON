@@ -24,3 +24,7 @@ Selain tipe data dalam bentuk object, biasanya dalam JSON, kadang kita menggunak
 `Array` di `JSON` mirip dengan `array di JavaScript`, dia bisa berisikan tipe `data primitif`, atau `tipe data kompleks`(`Object` atau `Array`)<br>
 Di golang, JSON Array direpesentasikan dalam bentuk slice<br>
 Konversi `dari JSON` atau `ke JSON` dilakukan secara otomatis oleh `package json` menggunakan `tipe data slice`
+### Decode JSON Array
+Selain menggunakan `Array` pada atribut di `Object`<br>
+Kita juga bisa melakukan `Encode` atau `Decode` langsung `JSON Array`nya<br>
+`Encode` dan `Decode` JSON Array bisa menggunakan tipe data `Slice`
