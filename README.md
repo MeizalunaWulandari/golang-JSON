@@ -18,3 +18,9 @@ Dimana tiap atribut di `JSON Object` merupakan atribut di `struct`
 ## JSON Decode
 Untuk melakukan konversi dari JSON ke tipe data di golang `(decode)`, kita bisa menggunakan function `json.Unmarshal(byte[], interface{})`<br>
 Diaman, `byte[]` adalah data `JSON`nya, sedangkan `interface{}` adalah tempat menyimpan hasil konversi, biasanya berupa `pointer`
+
+## JSON Array
+Selain tipe data dalam bentuk object, biasanya dalam JSON, kadang kita menggunakan tipe data `Array`<br>
+`Array` di `JSON` mirip dengan `array di JavaScript`, dia bisa berisikan tipe `data primitif`, atau `tipe data kompleks`(`Object` atau `Array`)<br>
+Di golang, JSON Array direpesentasikan dalam bentuk slice<br>
+Konversi `dari JSON` atau `ke JSON` dilakukan secara otomatis oleh `package json` menggunakan `tipe data slice`
