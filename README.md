@@ -54,3 +54,6 @@ Selanjutnya untuk membaca file input reader dan konversian secara langsung ke da
 ## Streaming Encoder
 `Encoder` bisa digunakan untuk menulis langsung JSON ke `io.Writer`
 Dengan begitu, kita tidak perlu menyimpan `JSON` datanya terlebih dahulu ke dalam variabel `string` atau `[]byte`, kita bisa langsung tulis ke `io.Writer`
+### json.Encoder
+Untuk membuat `Encoder`, kita bisa menggunakan function `json.NewEncoder(writer)`<br>
+Dan untuk menulis data sebagai `JSON` langsung ke `Writer`, kita bisa menggunakan function `Encode(interface{})`
