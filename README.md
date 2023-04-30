@@ -50,3 +50,7 @@ Kita bisa saja membaca semua datanya lalu menyimpannya kedalam variabel, baru la
 ### json.Decoder
 Untuk melakukan `json Decoder`, kita bisa menggunakan function `json.NewDecoder(reader)` <br>
 Selanjutnya untuk membaca file input reader dan konversian secara langsung ke data di golang cukup menggunakan function `Decode(interface{})`
+
+## Streaming Encoder
+`Encoder` bisa digunakan untuk menulis langsung JSON ke `io.Writer`
+Dengan begitu, kita tidak perlu menyimpan `JSON` datanya terlebih dahulu ke dalam variabel `string` atau `[]byte`, kita bisa langsung tulis ke `io.Writer`
