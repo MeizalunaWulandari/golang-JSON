@@ -18,3 +18,14 @@ func TestJSONMap(t *testing.T) {
 	fmt.Println(result["name"])
 	fmt.Println(result["price"])
 }
+
+func TestJSONMapDecode(t *testing.T) {
+	product := map[string]interface{}{
+		"id":    "PDT003",
+		"name":  "Titan Gamen Pink",
+		"price": 230000,
+	}
+
+	bytes, _ := json.Marshal(product)
+	fmt.Println(string(bytes))
+}
