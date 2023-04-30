@@ -47,3 +47,6 @@ Dan type data `map` tidak mendukung `JSON Tag` lagi
 ## Streaming Decoder
 Kadang data `JSON` berasal dari input berupa `io.Reader` `(File, Network, Request Body)`<br>
 Kita bisa saja membaca semua datanya lalu menyimpannya kedalam variabel, baru lalukan konversi dari `JSON` , namun hal seperi ini sebenarnya tidak perlu dilakukan karena `package JSON` memiliki fitur untuk membaca dari `stream`
+### json.Decoder
+Untuk melakukan `json Decoder`, kita bisa menggunakan function `json.NewDecoder(reader)` <br>
+Selanjutnya untuk membaca file input reader dan konversian secara langsung ke data di golang cukup menggunakan function `Decode(interface{})`
