@@ -28,3 +28,9 @@ Konversi `dari JSON` atau `ke JSON` dilakukan secara otomatis oleh `package json
 Selain menggunakan `Array` pada atribut di `Object`<br>
 Kita juga bisa melakukan `Encode` atau `Decode` langsung `JSON Array`nya<br>
 `Encode` dan `Decode` JSON Array bisa menggunakan tipe data `Slice`
+
+## JSON Tag
+Secara default atrubut yang terdapat di `struct` dan `JSON` akan di mapping sesuai dengan nama atribut yang sama (Case Sensitive)<br>
+Kadang style yang berbeda antara penamaan atribut di Struct dan JSON, misalnya  di JSON kita ingin menggunakan `snake_case`, tapi di `Struct` kita ingin menggunakan `PascalCase`<br>
+Untungnya `package json` mendukung `Tag Reflection`<br>
+Kita bisa menambahkan tag reflection dengan nama `JSON`, lalu diikuti dengan atribut yang kita inginkan ketika konversi `dari atau ke JSON`
