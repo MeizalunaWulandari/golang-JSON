@@ -34,3 +34,12 @@ Secara default atrubut yang terdapat di `struct` dan `JSON` akan di mapping sesu
 Kadang style yang berbeda antara penamaan atribut di Struct dan JSON, misalnya  di JSON kita ingin menggunakan `snake_case`, tapi di `Struct` kita ingin menggunakan `PascalCase`<br>
 Untungnya `package json` mendukung `Tag Reflection`<br>
 Kita bisa menambahkan tag reflection dengan nama `JSON`, lalu diikuti dengan atribut yang kita inginkan ketika konversi `dari atau ke JSON`
+
+## JSON Map
+Saat menggunakan `JSON`, kadang mungkin kita menemukan kasus data `JSON`nya `dinamis`<br>
+Artinya atributnya tidak menentu, bisa bertambah dan bisa berkurang, dan tidak tetap<br>
+Pada kasus seperti ini, menggunakan `struct` akan menyulitkan, karena pada `struct`, kita harus menentukan semua `atribut`nya <br>
+Untuk kasus seperti ini, kita bisa menggunakan tipe data `map[string]interface{}` <br>
+secara otomatis, atribut akan menjadi `key` di `map` dan `value` menjadi `value` di `map`<br>
+Namun karena value berupa `interface{}`, maka kita harus melakukan konversi secara manual jika ingin mengambil `value`nya<br>
+Dan type data `map` tidak mendukung `JSON Tag` lagi
