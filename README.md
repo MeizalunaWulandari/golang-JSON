@@ -43,3 +43,7 @@ Untuk kasus seperti ini, kita bisa menggunakan tipe data `map[string]interface{}
 secara otomatis, atribut akan menjadi `key` di `map` dan `value` menjadi `value` di `map`<br>
 Namun karena value berupa `interface{}`, maka kita harus melakukan konversi secara manual jika ingin mengambil `value`nya<br>
 Dan type data `map` tidak mendukung `JSON Tag` lagi
+
+## Streaming Decoder
+Kadang data `JSON` berasal dari input berupa `io.Reader` `(File, Network, Request Body)`<br>
+Kita bisa saja membaca semua datanya lalu menyimpannya kedalam variabel, baru lalukan konversi dari `JSON` , namun hal seperi ini sebenarnya tidak perlu dilakukan karena `package JSON` memiliki fitur untuk membaca dari `stream`
